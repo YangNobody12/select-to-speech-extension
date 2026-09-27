@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Select to Read — Google TTS",
+  "description": "เลือกข้อความบนหน้าเว็บ แล้ว extension จะอ่านด้วยเสียง",
+  "version": "1.6.1",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": ["contextMenus", "storage", "offscreen"],
+  "host_permissions": ["https://translate.google.com/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Select to Read settings",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

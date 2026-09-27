@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="popup.css">
+    <title>Select to Read settings</title>
+  </head>
+  <body>
+    <main>
+      <h1>Select to Read</h1>
+      <p>เลือกข้อความบนหน้าเว็บ แล้ว extension จะอ่านด้วยเสียง</p>
+      <label for="voice">ภาษา</label>
+      <select id="voice">
+        <option value="auto">อัตโนมัติ (ไทย/อังกฤษ)</option>
+        <option value="th">ไทย</option>
+        <option value="en">English</option>
+      </select>
+      <label for="rate">ความเร็ว</label>
+      <select id="rate">
+        <option value="-25%">ช้า</option>
+        <option value="+0%">ปกติ</option>
+        <option value="+25%">เร็ว</option>
+        <option value="+50%">เร็วมาก</option>
+      </select>
+      <button id="stop" type="button">หยุดอ่าน</button>
+      <p id="status" role="status" aria-live="polite"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

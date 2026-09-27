@@ -1,0 +1,15 @@
+.select-to-read-control {
+  position: fixed;
+  z-index: 2147483647;
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 12px;
+  color: #fff;
+  background: #155eef;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .22);
+  font: 600 13px/1 system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.select-to-read-control:hover { background: #004eeb; }
+.select-to-read-control:disabled { cursor: progress; opacity: .82; }
